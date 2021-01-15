@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Polls recentes</titile>
+        <title>Polls recentes</title>
         <meta chartset="utf-8">
         <meta name="author" content="Matheus Soares Martins">
         <meta name="description" content="Site para exibir detalhes da enquete escolhida.">
@@ -13,7 +13,7 @@
             
         {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-        <form action="{% url 'polls:vote' question.id %}" method="post">
+        <form action="{% url 'polls:vote' question.pk %}" method="post">
             {% csrf_token %}
             {% for choice in question.choice_set.all %}
                 <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}"> <!-- forloop counter indica quantas vezes o laço foi executado. -->
