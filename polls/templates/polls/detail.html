@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Polls recentes</titile>
+        <meta chartset="utf-8">
+        <meta name="author" content="Matheus Soares Martins">
+        <meta name="description" content="Site para exibir detalhes da enquete escolhida.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1>{{ question.question_text }}</h1>
+            
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+        <form action="{% url 'polls:vote' question.id %}" method="post">
+            {% csrf_token %}
+            {% for choice in question.choice_set.all %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}"> <!-- forloop counter indica quantas vezes o laço foi executado. -->
+                <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+            {% endfor %}
+            <input type="submit" value="Vote">
+        </form>
+    </body>
+</html>

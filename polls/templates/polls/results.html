@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Polls recentes</titile>
+        <meta chartset="utf-8">
+        <meta name="author" content="Matheus Soares Martins">
+        <meta name="description" content="Site para exibir os resultados de votação da enquete(Poll) escolhida.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1>{{ question.question_text }}</h1>
+
+        <ul>
+            {% for choice in question.choice_set.all %}
+                <li>{{ choice.choice_text }} -- {{ choice.votes }} voto{{ choice.votes|pluralize }}</li><!-- Se votes for 1 o resultado será voto. Se for mais de 1 o resultado será votos.(Para especificar outros sufixos podemos usar o nome_variável|pluralize:"letras_desejadas". Como por exemplo: coisa|pluralize:"os") -->
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'polls:detail' question.id %}">Vote again?</a>        
+    </body>
+</html>
