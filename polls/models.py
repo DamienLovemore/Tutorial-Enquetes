@@ -7,7 +7,7 @@ class Question(models.Model):
     pub_date=models.DateTimeField('date published')#Neste exemplo nós definimos um nome legível para humanos. Para todos os outros campos neste modelo, o nome legível para máquina será utilizado como nome legível para humanos.
 
     def was_published_recently(self):
-        return self.pub_date >= (timezone.now() - datetime.timedelta(days=1)) #Verifica se a data de publicação é maior ou igual a um dia anterior a hoje. Ou seja se foi postado ontem, ou depois disso.
+        return self.pub_date >= (timezone.now() - datetime.timedelta(days=1)) and self.pub_date <= timezone.now() #Verifica se a data de publicação é maior ou igual a um dia anterior a hoje, e se ela não ocorre em uma data futura a data de hoje. Ou seja se foi postado ontem, ou hoje.
 
     def __str__(self):
         return self.question_text
