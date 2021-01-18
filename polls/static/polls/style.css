@@ -1,0 +1,30 @@
+body
+{
+    background-image: url("images/background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Condensed', cursive;
+}
+
+ul
+{
+    list-style-type: none;
+    line-height: 250%;
+}
+
+ul li::before
+{
+    content: "■ ";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color:  #957DAD; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 2em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+li a
+{
+    color: #FFD8E3;
+    font-size: 6vh;
+    text-decoration: none;
+}

@@ -1,0 +1,50 @@
+body
+{
+    background-image: url("images/background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Roboto Condensed",cursive;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 6.8vh;
+    color: #D291BC;
+    margin: 0;
+    margin-bottom: 3vh;
+}
+
+ul
+{
+    list-style-type: none;
+    line-height: 220%;
+}
+
+ul li::before
+{
+    content: "■ ";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #E0BBE4; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 2em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+ul li
+{
+    color: #FFD8E3;
+    font-size: 6vh;
+}
+
+a#votarDenovo
+{
+    display:  inline-block;/* Para fazer com que seja possível aplicar "margin" no elemento. */
+    font-size: 4vh;
+    text-decoration: none;
+    color:  #E0BBE4;
+    background-color:  #957DAD;
+    border: solid 1vh #4F3565;
+    margin-top: 3vh;
+}
+

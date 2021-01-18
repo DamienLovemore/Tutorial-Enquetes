@@ -1,3 +1,5 @@
+{% load static %}
+
 <html>
     <head>
         <title>Polls recentes</title>
@@ -6,6 +8,7 @@
         <meta name="description" content="Site para exibir detalhes da enquete escolhida.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style_detail.css' %}">
     </head>
 
     <body>
@@ -19,7 +22,7 @@
                 <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}"> <!-- forloop counter indica quantas vezes o laço foi executado. -->
                 <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
             {% endfor %}
-            <input type="submit" value="Vote">
+            <input type="submit" id="enviar" value="Vote">
         </form>
     </body>
 </html>

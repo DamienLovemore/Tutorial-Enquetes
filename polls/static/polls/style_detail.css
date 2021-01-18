@@ -1,0 +1,42 @@
+body
+{
+    background-image: url("images/background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Roboto Condensed", cursive;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 6.8vh;
+    color: #D291BC;
+    margin: 0;
+    margin-bottom: 3vh;
+}
+
+label
+{
+    font-family: "Roboto Condensed", cursive;
+    font-size: 5vh;
+    font-weight: bolder;
+    color: #FFD8E3;
+    text-align: center;
+}
+
+input[type="radio"]
+{
+    width: 2.3%;
+}
+
+input#enviar
+{
+    font-family: "Roboto Condensed", cursive;
+    font-size: 4vh;
+    color: #E0BBE4;
+    background-color: #957DAD;
+    border: solid 0.5vh #4F3565;
+    width: 30%;
+    margin: 0;
+    margin-top: 3.5vh;
+}

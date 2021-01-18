@@ -1,3 +1,5 @@
+{% load static %}
+
 <html>
     <head>
         <title>Polls recentes</title>
@@ -6,6 +8,7 @@
         <meta name="description" content="Site para exibir os resultados de votação da enquete(Poll) escolhida.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style_results.css' %}"
     </head>
 
     <body>
@@ -17,6 +20,6 @@
             {% endfor %}
         </ul>
 
-        <a href="{% url 'polls:detail' question.id %}">Vote again?</a>        
+        <a id="votarDenovo" href="{% url 'polls:detail' question.id %}">Vote again?</a>        
     </body>
 </html>
