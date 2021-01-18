@@ -21,3 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/',include('polls.urls')),
 ]
+
+#Alteram determinados campos de texto do site /admin do Django.
+admin.site.site_header = 'Polls administration' # default: "Django Administration"
+admin.site.index_title = 'Site administration'  # default: "Site administration"
+admin.site.site_title = 'Polls administration' # default: "Django site admin"
+
