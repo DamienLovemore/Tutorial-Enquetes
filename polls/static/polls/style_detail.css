@@ -39,4 +39,17 @@ input#enviar
     width: 30%;
     margin: 0;
     margin-top: 3.5vh;
+    margin-bottom: 1.2vh;
+}
+
+h1 a
+{
+    color: #29122E;
+    text-decoration: none;
+    margin: 0;
+}
+
+h1 a:hover
+{
+    color: #E0BBE4;
 }
